@@ -19,9 +19,11 @@ init: false
 ports:
   53/udp: 53
   80/tcp: null
+  3000/tcp: null
 ports_description:
   53/udp: DNS server port
   80/tcp: Web interface (Not required for Ingress)
+  3000/tcp: API interface (Needed for sync)
 discovery:
   - adguard
 auth_api: true
@@ -30,6 +32,7 @@ hassio_api: true
 hassio_role: manager
 map:
   - ssl
+  - addon_config:rw
 options:
   ssl: true
   certfile: fullchain.pem
