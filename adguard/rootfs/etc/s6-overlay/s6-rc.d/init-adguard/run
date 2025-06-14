@@ -5,7 +5,7 @@
 # Home Assistant Community Add-on: AdGuard Home
 # Handles configuration
 # ==============================================================================
-readonly CONFIG="/data/adguard/AdGuardHome.yaml"
+readonly CONFIG="/config/adguard/AdGuardHome.yaml"
 declare schema_version
 declare -a interfaces
 declare -a hosts
@@ -14,7 +14,7 @@ declare fd
 declare a2
 
 if ! bashio::fs.file_exists "${CONFIG}"; then
-    mkdir -p /data/adguard
+    mkdir -p /config/adguard
     cp /etc/adguard/AdGuardHome.yaml "${CONFIG}"
 fi
 
