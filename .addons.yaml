@@ -1,0 +1,7 @@
+---
+channel: dev
+addons:
+  adguard:
+    repository: loofkid/addon-adguard-home:latest
+    target: adguard
+    image: loofkid/addon-adguard-home
